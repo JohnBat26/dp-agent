@@ -18,3 +18,5 @@ RUN apt-get update -y --fix-missing && \
     echo "stty iutf8" >> ~/.bashrc && \
     pip install -r requirements.txt && \
     rm -rf /var/lib/apt/lists/*
+
+RUN python -m run -ch http_client -pl pipeline_conf.json -db db_conf.json -rl -d
